@@ -19,59 +19,11 @@ class Program
     Console.WriteLine("Digite a sequência de comandos: ");
     string? commands = Console.ReadLine()?.ToUpper();
 
+    Robot robot = new Robot(x, y, direction!);
 
-    foreach (char command in commands)
-    {
+    robot.ExecuteCommands(commands!);
 
-      if (command == 'E')
-      {
-        if (direction == "N")
-          direction = "O";
-
-        else if (direction == "O")
-          direction = "S";
-
-        else if (direction == "S")
-          direction = "L";
-
-        else
-          direction = "N";
-      }
-
-      if (command == 'D')
-      {
-        if (direction == "N")
-          direction = "L";
-
-        else if (direction == "L")
-          direction = "S";
-
-        else if (direction == "S")
-          direction = "O";
-
-        else
-          direction = "N";
-      }
-
-      if (command == 'M')
-      {
-        if (direction == "N")
-          y += 1;
-
-        else if (direction == "L")
-          x += 1;
-
-        else if (direction == "S")
-          y -= 1;
-
-        else
-          x -= 1;
-      }
-
-    }
-
-    Console.WriteLine($"Posição alcançada: {x} {y} {direction}");
-
+    Console.WriteLine($"Posição alcançada: {robot.GetFinalPosition()}");
   }
 
   static void ShowHeader()
@@ -81,5 +33,4 @@ class Program
     Console.WriteLine("===========================");
     Console.WriteLine();
   }
-
 }
