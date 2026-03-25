@@ -13,7 +13,7 @@ Academia do Programador, reconhecidos como excelentes programadores,
 foram contratados para desenvolver o software que irá guiar o Robô nesta
 empreitada.
 
-### Sobre o Sistema
+## Sobre o Sistema
 A área escolhida para análise é curiosamente retangular e os robôs devem
 andar por ela com suas câmeras ligadas coletando todo tipo de informação.
 
@@ -32,7 +32,7 @@ Assuma que mover o robô para frente, significa mover sua posição de (X, Y)
 para (X, Y+1). Por exemplo, um robô na posição (0,0) com a face para o norte,
 ao se mover uma posição, vai parar em (0,1).
 
-### Entrada
+## Entrada
 O programa deve possuir os seguintes parâmetros:
 - A primeira linha deve ser as coordenadas do canto superior direito da
 área. O canto inferior esquerdo é sempre (0,0).
@@ -46,11 +46,11 @@ correspondendo pelas coordenadas X e Y e a orientação do robô. Cada robô
 vai executar as instruções de forma sequencial: o segundo robô só iniciará
 suas ações quando o primeiro terminar.
 
-### Saída
+## Saída
 Para cada robô, a posição final e sua orientação depois de executada as
 instruções.
 
-### Exemplo
+## Exemplo
 Para cada robô, a posição final e sua orientação depois de executada as
 instruções.
 
