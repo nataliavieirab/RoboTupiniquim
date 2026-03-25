@@ -5,6 +5,8 @@ class Program
   static void Main(string[] args)
   {
 
+    Console.Clear();
+
     ShowHeader();
 
     Console.Write("• Digite o valor da posição X: ");
