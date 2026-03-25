@@ -7,23 +7,24 @@ class Program
 
     ShowHeader();
 
-    Console.WriteLine("Digite o valor da posição X: ");
+    Console.Write("Digite o valor da posição X: ");
     int x = Convert.ToInt32(Console.ReadLine());
 
-    Console.WriteLine("Digite o valor da posição Y: ");
+    Console.Write("Digite o valor da posição Y: ");
     int y = Convert.ToInt32(Console.ReadLine());
 
-    Console.WriteLine("Digite a orientação: ");
+    Console.Write("Digite a orientação: ");
     string? direction = Console.ReadLine()?.ToUpper();
 
-    Console.WriteLine("Digite a sequência de comandos: ");
+    Console.Write("Digite a sequência de comandos: ");
     string? commands = Console.ReadLine()?.ToUpper();
 
     Robot robot = new Robot(x, y, direction!);
 
     robot.ExecuteCommands(commands!);
 
-    Console.WriteLine($"Posição alcançada: {robot.GetFinalPosition()}");
+    Console.WriteLine($"\nPosição alcançada: {robot.GetFinalPosition()}");
+    Console.ReadLine();
   }
 
   static void ShowHeader()

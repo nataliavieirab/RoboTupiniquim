@@ -1,5 +1,3 @@
-using System.Collections.Specialized;
-
 class Robot
 {
   private int x;
@@ -17,60 +15,45 @@ class Robot
   {
     foreach (char command in commands)
     {
-      if (command == 'E')
-        TurnLeft();
+      if (command == 'E') TurnLeft();
 
-      if (command == 'D')
-        TurnRight();
+      if (command == 'D') TurnRight();
 
-      if (command == 'M')
-        Move();
+      if (command == 'M') Move();
     }
   }
 
   private void TurnLeft()
   {
-    if (direction == "N")
-      direction = "O";
+    if (direction == "N") direction = "O";
 
-    else if (direction == "O")
-      direction = "S";
+    else if (direction == "O") direction = "S";
 
-    else if (direction == "S")
-      direction = "L";
+    else if (direction == "S") direction = "L";
 
-    else
-      direction = "N";
+    else if (direction == "L") direction = "N";
   }
 
   private void TurnRight()
   {
-    if (direction == "N")
-      direction = "L";
+    if (direction == "N") direction = "L";
 
-    else if (direction == "L")
-      direction = "S";
+    else if (direction == "L") direction = "S";
 
-    else if (direction == "S")
-      direction = "O";
+    else if (direction == "S") direction = "O";
 
-    else
-      direction = "N";
+    else if (direction == "O") direction = "N";
   }
 
   public void Move()
   {
-    if (direction == "N")
-      y += 1;
+    if (direction == "N") y++;
 
-    else if (direction == "L")
-      x += 1;
+    else if (direction == "L") x++;
 
-    else if (direction == "S")
-      y -= 1;
+    else if (direction == "S") y--;
 
-    else
-      x -= 1;
+    else if (direction == "O") x--;
   }
 
   public string GetFinalPosition()
